@@ -1,11 +1,11 @@
 @font-face {
     font-family: "FZ-title";
-    src: url(../font/方正粗黑宋简体.ttf);
+    src: url(../fonts/方正粗黑宋简体.ttf);
 }
 
 @font-face {
     font-family: "contentZT";
-    src: url(../font/SourceHanSansCN-Normal.otf);
+    src: url(../fonts/SourceHanSansCN-Normal.otf);
 }
 
 /* 把我们所有标签的内外边距清零 */
@@ -36,7 +36,7 @@ button {
 }
 
 a {
-    color: #666;
+    color: #fdfff9;
     text-decoration: none
 }
 
@@ -52,7 +52,7 @@ body {
     /* CSS3 抗锯齿形 让文字显示的更加清晰 */
     -webkit-font-smoothing: antialiased;
     background-color: #2d5d72;
-    font: 14px/1.5 "contentZT",Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    font: 14px/2 "contentZT",Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
     color: #fdfff9;
 }
 
