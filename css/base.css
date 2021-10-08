@@ -1,8 +1,4 @@
 
-@font-face {
-    font-family: "contentZT";
-    src: url(../fonts/SourceHanSansCN-Normal.otf);
-}
 
 /* 把我们所有标签的内外边距清零 */
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,legend,img,main,div {
@@ -48,7 +44,7 @@ body {
     /* CSS3 抗锯齿形 让文字显示的更加清晰 */
     -webkit-font-smoothing: antialiased;
     background-color: #2d5d72;
-    font: 14px/2 "contentZT",Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    font: 14px/2 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
     color: #fdfff9;
 }
 

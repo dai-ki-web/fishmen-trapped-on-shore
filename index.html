@@ -74,7 +74,7 @@
                 </p>
                 <img src="images/timeline.png" alt="">
                 <h3>上岸：身份转变，困难重重</h3>
-                <p class="indent">
+                <p>
                     根据农业农村部、财政部和人力资源社会保障部联合印发的《长江流域重点水域禁捕和建立补偿制度实施方案》（建议配截图）中的内容，政府需要关注渔民上岸过程中临时生活补助、社会保障、职业技能培训等多个领域，采取一次性补助与过渡期补助相结合的方式，支持渔民上岸。
                     安徽作为一个有近两万户上岸居民的“重要”省份，在此次禁渔退捕工作中的安置任务占全国的1/5。想要让这两万户渔民弃渔上岸、得到合理安置并最终找到新的营生手段，实属不易。
                 </p>
@@ -109,7 +109,7 @@
                 </p>
 
                 <h3>切入：“渔民新村”的方方面面</h3>
-                <p class="indent">安徽省无为市位于长江中下游，而坐落于皖江北岸、无为市南大门的牛埠镇土桥社区曾是一个有名的历史古镇。“中国螃蟹看安徽，安徽螃蟹看无为”，
+                <p>安徽省无为市位于长江中下游，而坐落于皖江北岸、无为市南大门的牛埠镇土桥社区曾是一个有名的历史古镇。“中国螃蟹看安徽，安徽螃蟹看无为”，
                     牛埠镇曾以江蟹“中华绒螯蟹”而远近闻名。该社区的绝大部分居民祖祖辈辈以捕鱼为生，是长江沿岸捕鱼地区的典型代表。
                     土桥社区东临长江，渔民及渔民家属集中安置于“渔民新村”，具备一定的典型性。且当地政府对“十年禁渔”政策的执行力度较大，各项生活保障工作完成度较高，是一个值得深入调研的地区。
                 </p>
@@ -525,6 +525,21 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/sticksy.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        window.onscroll = function () {
+            var scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            // console.log(scrollH);
+            fadeOut(wordP1, "leftOrigin");
+            fadeOut(wordP2, "rightOrigin");
+            if (GetRect(nav).top == 90) {
+                navFade(nav, scrollH);
+            }
+            showTitle(scrollH);
+            slide(scrollH);
+            bgActive(scrollH);
+            dolphin(dolph);
+        }
+    </script>
 </body>
 
 </html>

@@ -202,16 +202,3 @@ function bgActive(scrollH) {
     }
 }
 
-window.onscroll = function () {
-    var scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    // console.log(scrollH);
-    fadeOut(wordP1, "leftOrigin");
-    fadeOut(wordP2, "rightOrigin");
-    if (GetRect(nav).top == 90) {
-        navFade(nav, scrollH);
-    }
-    showTitle(scrollH);
-    slide(scrollH);
-    bgActive(scrollH);
-    dolphin(dolph);
-}
