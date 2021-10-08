@@ -51,7 +51,28 @@
     }
 }
 
+@keyframes fadetitle{
+    0%{
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+        top: 0;
+        /* transform: translate(-50%,-50%); */
+    }
+}
+
+@keyframes dolphinUp {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1),translateY(-5px);
+    }
+}
 
 
 .ani-show {
@@ -70,75 +91,6 @@
     transform-origin: right center;
 }
 
-article {
-    background-color: #2d5d72;
-    padding: 50px 0;
-}
-
-.bgOne {
-    background: url('../images/part1.png') no-repeat;
-    z-index: -4;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center bottom;
-}
-
-.bgTwo {
-    background: url('../images/part2.png') no-repeat;
-    display: none;
-    z-index: -3;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center top;
-}
-
-.bgThree {
-    background: url('../images/part3.png') no-repeat;
-    display: none;
-    z-index: -2;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center top;
-}
-
-.bgFour {
-    background: url('../images/part4.png') no-repeat;
-    display: none;
-    z-index: -1;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center bottom;
-}
-
-.bgEnd {
-    background: url('../images/bgend.JPG') no-repeat;
-    display: none;
-    z-index: -1;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center bottom;
-}
-
 .bgTitleIn {
     animation: bgFadeIn 1s ease forwards;
 }
@@ -149,48 +101,107 @@ article {
 
 
 .bigtitle {
-    /* animation: fadetitle  1s forwards; */
     animation: bgFadeIn  1s forwards;
 }
 
-.bgOne div {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-image: url(../images/part1-title.png);
-    background-position: center -50px;
+.dolUp {
+    display: block;
+    animation: dolphinUp 2s ease forwards;
+    transform-origin: bottom;
 }
 
-.bgTwo div {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-image: url(../images/part2-title.png);
-    background-position: 15px -60px;
+
+article {
+    background-color: #2d5d72;
+    padding: 50px 0;
 }
 
-.bgThree div {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-image: url(../images/part3-title.png);
-    background-position: -10px 10px; 
+body h3 {
+    padding: 20px 0;
 }
 
-.bgFour div {
+body p {
+    margin-bottom: 20px;
+}
+
+header {
+    /* position: relative; */
+    display: block;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    background: #2d5d72;
+}
+
+p span {
+    color: #d8ff3e;
+}
+
+section {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+img {
+    margin: 0 auto;
+}
+
+div[class^="bg"] {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+div[class^="bg"] img {
     position: absolute;
     opacity: 0;
     width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-image: url(../images/part4-title.png);
-    background-position: 150px -60px; 
+}
+
+.bgOne {
+    background: url('../images/part1.png') no-repeat;
+    z-index: -4;
+    background-position: center bottom;
+}
+
+.bgOne img {
+    bottom: 0;
+}
+
+.bgTwo {
+    background: url('../images/part2.png') no-repeat;
+    display: none;
+    z-index: -3;
+    background-position: center top;
+}
+
+.bgTwo img {
+    top: 0;
+}
+
+.bgThree {
+    background: url('../images/part3.png') no-repeat;
+    display: none;
+    z-index: -2;
+    background-position: center top;
+}
+
+.bgThree img {
+    top: 0;
+}
+
+.bgFour {
+    background: url('../images/part4.png') no-repeat;
+    display: none;
+    z-index: -1;
+    background-position: center bottom;
+}
+
+.bgFour img {
+    bottom: 0;
 }
 
 button[class^="btn"] {
@@ -259,28 +270,30 @@ div[class^="intro-word"] img {
     width: 100%;
 }
 
-
 .ending {
     margin: 100px 0;
     padding-left: 50%;
+    line-height: 100px;
 }
 
-.text h3 {
-    font-size: 16px;
-    margin: 50px 0 10px;
-}
-
-body h3 {
-    padding: 20px 0;
-}
-
-header {
-    /* position: relative; */
-    display: block;
+.endBg {
+    background: url('../images/bgend.JPG') no-repeat;
+    display: none;
+    z-index: -1;
+    position: fixed; 
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 900px;
-    overflow: hidden;
-    background: #2d5d72;
+    height: 100%;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.endBg img {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    right: 100px;
 }
 
 .intro-p1 {
@@ -324,24 +337,20 @@ header {
     display: none;
 }
 
-@keyframes fadetitle{
-    0%{
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        top: 0;
-        /* transform: translate(-50%,-50%); */
-    }
+.nav {
+    position: relative;
 }
 
-p span {
-    color: #d8ff3e;
+.nav img {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-body p {
-    margin-bottom: 20px;
+.nav img:first-of-type {
+    position: static;
 }
 
 .situation {
@@ -361,7 +370,7 @@ body p {
     display: flex;
     align-items: center;
     width: 400px;
-    /* height: 100px; */
+    height: 200px;
     margin: 0 auto 750px;
     background-color: rgba(45,93,114,.5);
 }
@@ -376,11 +385,6 @@ body p {
     color: #d8ff3e;
 }
 
-section {
-    width: 1000px;
-    margin: 0 auto;
-}
-
 .title {
     height: 1100px;
     background-color: transparent;
@@ -392,8 +396,18 @@ section {
     width: 720px;
 }
 
+.text h3 {
+    font-size: 16px;
+    margin: 50px 0 10px;
+}
 .text p {
     margin-bottom: 30px;
+}
+
+.text img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .work-situation,.insurance {
@@ -408,7 +422,7 @@ section {
 }
 
 
-.work-situation div:hover::after,.insurance div:hover::after {
+.work-situation div:hover::after {
     position: absolute;
     bottom: 25%;
     left: 50%;
@@ -435,7 +449,27 @@ section {
     content: "51.7%";
 }
 
+.insurance div:hover::after {
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 70px;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px #5f5f5f;
+}
+
 .insurance div:nth-child(1):hover:after{
+    content: "68%";
+}
+
+.insurance div:nth-child(2):hover:after{
+    content: "99.8%";
+}
+
+.insurance div:nth-child(3):hover:after{
     content: "100%";
 }
+
 
