@@ -112,23 +112,15 @@
 
 
 article {
+    width: 100%;
     background-color: #2d5d72;
     padding: 50px 0;
-}
-
-body h3 {
-    padding: 20px 0;
-}
-
-body p {
-    margin-bottom: 20px;
 }
 
 header {
     /* position: relative; */
     display: block;
     width: 100%;
-    height: 900px;
     overflow: hidden;
     background: #2d5d72;
 }
@@ -138,12 +130,19 @@ p span {
 }
 
 section {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
 }
 
 img {
     margin: 0 auto;
+}
+
+footer {
+    padding: 50px 0;
+    color: black;
+    font-size: 12px;
+    background-color: #fff;
 }
 
 div[class^="bg"] {
@@ -155,10 +154,24 @@ div[class^="bg"] {
     background-size: cover;
 }
 
-div[class^="bg"] img {
+div[class^="bg"] div {
     position: absolute;
-    opacity: 0;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.audio {
+    position: absolute;
+    top: 0;
+    left: -70px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    /* background: url("../images/audio.png"); */
 }
 
 .bgOne {
@@ -167,19 +180,22 @@ div[class^="bg"] img {
     background-position: center bottom;
 }
 
-.bgOne img {
-    bottom: 0;
+.bgOne div {
+    opacity: 0;
+    background: url('../images/part1-title.png') no-repeat;
+    background-position: center bottom;
 }
 
 .bgTwo {
     background: url('../images/part2.png') no-repeat;
-    display: none;
     z-index: -3;
     background-position: center top;
 }
 
-.bgTwo img {
-    top: 0;
+.bgTwo div {
+    background: url('../images/part2-title.png') no-repeat;
+    opacity: 0;
+    background-position: center top;
 }
 
 .bgThree {
@@ -189,8 +205,10 @@ div[class^="bg"] img {
     background-position: center top;
 }
 
-.bgThree img {
-    top: 0;
+.bgThree div {
+    background: url('../images/part3-title.png') no-repeat;
+    opacity: 0;
+    background-position: center top;
 }
 
 .bgFour {
@@ -200,13 +218,17 @@ div[class^="bg"] img {
     background-position: center bottom;
 }
 
-.bgFour img {
-    bottom: 0;
+.bgFour div {
+    background: url('../images/part4-title.png') no-repeat;
+    opacity: 0;
+    background-position: center bottom;
 }
 
 button[class^="btn"] {
     position: absolute;
-    width: 50px;
+    width: 10%;
+    min-width: 10px;
+    max-width: 50px;
     height: 50px; 
     top: 250px;
     color: #fdfff9;
@@ -237,10 +259,12 @@ button[class^="btn"] {
 .cover {
     background: url("../images/head.jpg");
     background-size: cover;
+    background-position: center;
     position: relative;
     display: block;  
     width: 100%;
-    height: 800px;
+    height: calc(100% - 200px);
+    /* height: 800px; */
     overflow: hidden;
     margin: 0 auto;
 }
@@ -252,6 +276,18 @@ button[class^="btn"] {
     height: 100%;
     background: url("../images/title.png") no-repeat;
     background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.cover div h1 {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%,0);
+    font-weight: 400;
+    letter-spacing: 30px;
 }
 
 div[class^="intro-word"] {
@@ -273,7 +309,7 @@ div[class^="intro-word"] img {
 .ending {
     margin: 100px 0;
     padding-left: 50%;
-    line-height: 100px;
+    line-height: 50px;
 }
 
 .endBg {
@@ -286,14 +322,18 @@ div[class^="intro-word"] img {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center bottom;
+    background-position: right bottom;
 }
 
 .endBg img {
     position: absolute;
-    width: 300px;
+    width: 40%;
     bottom: 0;
-    right: 100px;
+    right: 5%;
+}
+
+.hd {
+    width: 100%;
 }
 
 .intro-p1 {
@@ -308,6 +348,7 @@ div[class^="intro-word"] img {
     background:url(../images/intro2.png) no-repeat;
     background-size: contain;
     height: 700px;
+    background-position: right;
 }
 
 .intro-word1 div img {
@@ -384,7 +425,7 @@ div[class^="intro-word"] img {
 .situ-content div {
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 80%;
     height: 200px;
     margin: 0 auto 750px;
     background-color: rgba(45,93,114,.5);
@@ -401,39 +442,79 @@ div[class^="intro-word"] img {
 }
 
 .title {
-    height: 1100px;
+    /* height: 100%; */
     background-color: transparent;
     text-align: center;
 }
 
 .text {
-    margin: 10px auto;
-    width: 720px;
+    margin: 10px auto 20px;
+    width: 60%;
 }
 
 .text h3 {
     font-size: 16px;
     margin: 50px 0 10px;
+    padding: 20px 0;
 }
+
 .text p {
     margin-bottom: 30px;
 }
 
 .text img {
     display: block;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
+.tools {
+    position: relative;
+}
+
+.tools a {
+    position: relative;
+    display: block;
+    width: 25%;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+
+.tools img { 
+    position: relative;
+    transform: translate(0,-50%); 
+    display: block;
+    width: 100%;
+}
+
+.tools a p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 40px;
+    opacity: 0;
+}
+
+.tools a:hover p {
+    opacity: 1;
+}
+
 .work-situation,.insurance {
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
     padding: 30px 0;
 }
 
 
 .work-situation div,.insurance div{
+    float: left;
     position: relative;
+}
+
+.work-situation div {
+    width: 240px;
 }
 
 

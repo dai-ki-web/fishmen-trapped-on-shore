@@ -1,3 +1,59 @@
+// 获取视窗高度
+var Height = document.documentElement.clientHeight;
+var body = document.querySelector("body");
+document.querySelector("header").style.height = (Height + 200) + "px";
+for (var i = 1; i < 5; i++) {
+    document.getElementById("title" + i).style.height = (Height + 100) + "px";
+}
+
+// 对话框
+var wordP1 = []
+for (var i = 0; i < 4; i++) {
+    wordP1.push(document.querySelector(".intro-word1").querySelectorAll("div")[i].querySelector("img"));
+}
+var wordP2 = []
+for (var i = 0; i < 2; i++) {
+    wordP2.push(document.querySelector(".intro-word2").querySelectorAll("div")[i].querySelector("img"));
+}
+
+// 各部分的高度
+var headerH = document.querySelector("header").clientHeight;
+var introH = document.getElementById("intro").clientHeight;
+var situaH = document.getElementById("situation").clientHeight;
+var articleZeroH = document.getElementById("partZero").clientHeight;
+var hdOneH = document.getElementById("hdOne").clientHeight;
+var articleOneH = document.getElementById("partOne").clientHeight;
+var hdTwoH = document.getElementById("hdTwo").clientHeight;
+var articleTwoH = document.getElementById("partTwo").clientHeight;
+var hdThreeH = document.getElementById("hdThree").clientHeight;
+var articleThreeH = document.getElementById("partThree").clientHeight;
+var hdFourH = document.getElementById("hdFour").clientHeight;
+var articleFourH = document.getElementById("partFour").clientHeight;
+
+var personH = document.getElementById("person").clientHeight;
+
+var toTop = 0.5 * (Height - 700);
+// sticky
+var stickyEl1 = $('.cover').sticksy({ topSpacing: 0 })[0];
+var stickyEl2 = $('.nav').sticksy({ topSpacing: 90 })[0];
+var stickyEl3 = $('.graph-stone').sticksy({ topSpacing: toTop })[0];
+
+var iframe = document.getElementById("situation").querySelectorAll("iframe")[1];
+var buhchang = document.getElementById("buchang");
+var nav = document.getElementById("nav");
+var ending = document.getElementById("ending");
+var dolph = document.getElementById("dolphin");
+var footer = document.querySelector("footer");
+
+// 章节背景图
+var ele;
+var elebg = [];
+for (var i = 0; i < 5; i++) {
+    elebg.push(document.getElementById("bg" + (i + 1)))
+}
+
+
+
 function GetRect(element) {
     var rect = element.getBoundingClientRect();
     var top = document.documentElement.clientTop;
@@ -11,30 +67,26 @@ function GetRect(element) {
 }
 
 // 控制对话框
-// 获取视窗高度
-var Height = document.documentElement.clientHeight;
+
 function fadeOut(eleArray, cN) {
     for (var i = 0; i < eleArray.length; i++) {
         var h = eleArray[i].clientHeight;
         var boxData = GetRect(eleArray[i]);
-        if (boxData.top <= (Height - h) * 1) {
+        if (boxData.top <= (Height - h - toTop) * 1) {
             eleArray[i].className = "ani-show " + cN;
         }
-        else if (boxData.top > (Height - h) * 1) {
+        else if (boxData.top > (Height - h - toTop) * 1) {
             eleArray[i].className = "ani-dishow " + cN;
         }
     }
 
 }
 
-var body = document.querySelector("body");
-
 // 控制背景
 function bgMove(ele, bg) {
     var titlepos = GetRect(ele);
-    var tempBox = bg.querySelector("img");
+    var tempBox = bg.querySelector("div");
     if (titlepos.top <= 0) {
-
         tempBox.className = "bgTitleIn";
         if (titlepos.bottom <= Height && titlepos.bottom > 0) {
             // 移动的距离
@@ -88,7 +140,6 @@ function previous() {
 function navFade(nav, scrollH) {
     var obj = nav.querySelectorAll("img");
     var sh = scrollH - headerH - personH;
-    console.log(sh);
     var n = parseInt(sh / 350);
     for (var i = 0; i <= n; i++) {
         obj[i].className = "bgTitleIn";
@@ -99,52 +150,6 @@ function dolphin(obj) {
     if (GetRect(ending).bottom <= Height) {
         obj.className = "dolUp";
     }
-}
-
-// 对话框
-var wordP1 = []
-for (var i = 0; i < 4; i++) {
-    wordP1.push(document.querySelector(".intro-word1").querySelectorAll("div")[i].querySelector("img"));
-}
-var wordP2 = []
-for (var i = 0; i < 2; i++) {
-    wordP2.push(document.querySelector(".intro-word2").querySelectorAll("div")[i].querySelector("img"));
-}
-
-// 各部分的高度
-var headerH = document.querySelector("header").clientHeight;
-var introH = document.getElementById("intro").clientHeight;
-var situaH = document.getElementById("situation").clientHeight;
-var articleZeroH = document.getElementById("partZero").clientHeight;
-var hdOneH = document.getElementById("hdOne").clientHeight;
-var articleOneH = document.getElementById("partOne").clientHeight;
-var hdTwoH = document.getElementById("hdTwo").clientHeight;
-var articleTwoH = document.getElementById("partTwo").clientHeight;
-var hdThreeH = document.getElementById("hdThree").clientHeight;
-var articleThreeH = document.getElementById("partThree").clientHeight;
-var hdFourH = document.getElementById("hdFour").clientHeight;
-var articleFourH = document.getElementById("partFour").clientHeight;
-
-var personH = document.getElementById("person").clientHeight;
-
-
-// sticky
-var stickyEl1 = $('.cover').sticksy({ topSpacing: 0 })[0];
-var stickyEl2 = $('.nav').sticksy({ topSpacing: 90 })[0];
-var stickyEl3 = $('.graph-stone').sticksy({ topSpacing: 50 })[0];
-// var stickyEl4 = $('.intro-word1').sticksy({ topSpacing: 60 })[0];
-
-var iframe = document.getElementById("situation").querySelectorAll("iframe")[1];
-var buhchang = document.getElementById("buchang");
-var nav = document.getElementById("nav");
-var ending = document.getElementById("ending");
-var dolph = document.getElementById("dolphin");
-
-// 章节背景图
-var ele;
-var elebg = [];
-for (var i = 0; i < 5; i++) {
-    elebg.push(document.getElementById("bg" + (i + 1)))
 }
 
 function showTitle(scrollH) {
@@ -196,9 +201,17 @@ function bgActive(scrollH) {
         elebg[4].style.display = "none";
     }
 
-    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH - Height - 200) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
+    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
         elebg[3].style.display = "none";
         elebg[4].style.display = "block";
+    }
+}
+
+function foot() {
+    if (GetRect(footer).top <= Height) {
+        var box = document.getElementById("bg5");
+        console.log(footer.top);
+        box.style.top = (GetRect(footer).top - Height) + "px";
     }
 }
 
