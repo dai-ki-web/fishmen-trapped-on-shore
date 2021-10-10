@@ -92,11 +92,11 @@
 }
 
 .bgTitleIn {
-    animation: bgFadeIn 1s ease forwards;
+    animation: bgFadeIn .8s ease forwards;
 }
 
 .bgTitleOut {
-    animation: bgFadeOut .5s ease forwards;
+    animation: bgFadeOut .3s ease forwards;
 }
 
 
@@ -115,6 +115,33 @@ article {
     width: 100%;
     background-color: #2d5d72;
     padding: 50px 0;
+}
+
+audio {
+    display: none;
+}
+
+aside {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+}
+
+aside ul {
+    position: relative;
+}
+
+aside ul li {
+    display: block;
+    padding: 10px;
+    height: 50px;
+    background-color: rgba(255,255,255,.5);
+}
+
+aside ul li img {
+    height: 100%;
+    object-fit: contain;
 }
 
 header {
@@ -167,12 +194,13 @@ div[class^="bg"] div {
 .audio {
     position: absolute;
     top: 0;
-    left: -70px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    /* background: url("../images/audio.png"); */
+    left: -12%;
+    /* display: inline-block; */
+    width: 10%;
+    min-width: 25px;
+    height: 60px;
+    background: transparent url("../images/audio.png") no-repeat;
+    background-size: contain;
 }
 
 .bgOne {
@@ -289,6 +317,10 @@ button[class^="btn"] {
     transform: translate(-50%,0);
     font-weight: 400;
     letter-spacing: 30px;
+}
+
+.choosed {
+    background-color: #55899e;
 }
 
 div[class^="intro-word"] {

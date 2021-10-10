@@ -44,6 +44,7 @@ var nav = document.getElementById("nav");
 var ending = document.getElementById("ending");
 var dolph = document.getElementById("dolphin");
 var footer = document.querySelector("footer");
+var side = document.querySelector("aside").querySelectorAll("li");
 
 // 章节背景图
 var ele;
@@ -172,36 +173,53 @@ function slide(scrollH) {
 function bgActive(scrollH) {
     if (scrollH > (headerH + articleZeroH - Height) && scrollH <= (headerH + articleZeroH + hdOneH)) {
         ele = document.getElementById("title1");
-        bgMove(ele, elebg[0]);
+        side[0].classList.add("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
         elebg[0].style.display = "block";
         elebg[1].style.display = "none";
+        bgMove(ele, elebg[0]);
     }
 
     if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH - Height - 200) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH)) {
+        side[0].classList.remove("choosed");
+        side[1].classList.add("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
         ele = document.getElementById("title2");
-        bgMove(ele, elebg[1]);
         elebg[0].style.display = "none";
         elebg[1].style.display = "block";
         elebg[2].style.display = "none";
+        bgMove(ele, elebg[1]);
     }
 
     if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH - Height - 200) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH)) {
         ele = document.getElementById("title3");
-        bgMove(ele, elebg[2]);
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.add("choosed");
+        side[3].classList.remove("choosed");
+
         elebg[1].style.display = "none";
         elebg[2].style.display = "block";
         elebg[3].style.display = "none";
+        bgMove(ele, elebg[2]);
     }
 
     if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH - Height - 200) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH)) {
         ele = document.getElementById("title4");
-        bgMove(ele, elebg[3]);
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.add("choosed");
         elebg[2].style.display = "none";
         elebg[3].style.display = "block";
         elebg[4].style.display = "none";
+        bgMove(ele, elebg[3]);
     }
 
-    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
+    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH - Height - 200)) {
         elebg[3].style.display = "none";
         elebg[4].style.display = "block";
     }
@@ -215,3 +233,50 @@ function foot() {
     }
 }
 
+function playVoice(e) {
+    var voice = e.srcElement.querySelector("audio");
+    voice.play();
+}
+
+function asideActive(scrollH) {
+    if (scrollH < (headerH + articleZeroH) && scrollH >= 0) {
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
+    }
+    if (scrollH >= (headerH + articleZeroH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH)) {
+        side[0].classList.add("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
+    }
+
+    if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH)) {
+        side[0].classList.remove("choosed");
+        side[1].classList.add("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
+    }
+
+    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.add("choosed");
+        side[3].classList.remove("choosed");
+    }
+
+    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.add("choosed");
+    }
+
+    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
+        side[0].classList.remove("choosed");
+        side[1].classList.remove("choosed");
+        side[2].classList.remove("choosed");
+        side[3].classList.remove("choosed");
+    }
+}

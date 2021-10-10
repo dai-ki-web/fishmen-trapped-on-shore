@@ -5,6 +5,7 @@
     <meta charset=" UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/base.css">
     <title>江面再无蓑笠翁</title>
@@ -209,8 +210,11 @@
                 </figure>
                 <p>在他们父子二人看来，他们家既没钱，也没地，转产培训时教的养殖业还需要池塘，现在的养殖都是私人承包的，现在也没有国营养殖场雇人，自己做养殖毫无竞争力。
                 </p>
+
                 <p style="position: relative;">
-                    <a href="" class="audio"></a>
+                    <button class="audio" onclick="playVoice(event)">
+                        <audio src="audio/第一个音频.mp3" id="voice1" controls></audio>
+                    </button>
                     <span><ins>“现在没有收入，对未来也没有打算。打工的话疫情期间也不好找，最要命的是文化程度太低了。”</ins>
                     </span>
                     陈先生对当下和未来的发展并不明晰，态度不是很积极，并没有从渔民的身份转变过来。
@@ -226,7 +230,7 @@
             </div>
         </section>
         <!-- 渔民就业情况 -->
-        <section class="clearfix">
+        <section class="clearfix" style="text-align: center;">
             <div class="work-situation">
                 <!-- 人社部系统人员 -->
                 <div>
@@ -352,7 +356,10 @@
                 <p>即便如此，老陈家的经济状况一直不太好，每月400元的收入让家里揭不开锅。</p>
                 <p>“五年前，在小孙女三岁时，儿媳就丢下孩子离婚了。”</p>
                 <p>如今，他二十多岁的儿子在外面打工，还没有参上社保。养殖业的培训对他来说并不实用，没有钱和地皮的投资就没有办法实现转业，养老保险业要六十岁才能拿到。</p>
-                <p>
+                <p style="position: relative;">
+                    <button class="audio" onclick="playVoice(event)">
+                        <audio src="audio/第二个音频.mp3" id="voice1" controls></audio>
+                    </button>
                     <span><ins>“我和老伴还能吃几个子呢，每个月收入就那看大门的400元，根本不够。”</ins></span>
                 </p>
                 <h3 class="middle">勉强糊口的现在和未来</h3>
@@ -575,12 +582,9 @@
     </article>
 
     <!-- 结语 -->
-    <!-- <div id="last"> -->
     <div id="bg5" class="endBg">
         <img id="dolphin" src="images/dolphin.png" alt="" style="opacity:0">
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
     <div id="ending" style="padding-top: 600px;">
         <p class="ending">“渔民新村”是全中国长江沿岸所有捕鱼村落的缩影<br>
             一个渔民新村<br>
@@ -650,6 +654,19 @@
             </p>
         </section>
     </footer>
+
+    <aside>
+        <ul>
+            <li><a href="#title1"><img src="images/tag2.PNG" alt=""></a></li>
+            <li><a href="#title2"><img src="images/tag3.PNG" alt=""></a></li>
+            <li><a href="#title3"><img src="images/tag1.PNG" alt=""></a></li>
+            <li><a href="#title4"><img src="images/tag4.PNG" alt=""></a></li>
+            <li
+                style="position: absolute;left: 0;height: 50px;background-color: #55899e;top: 0;z-index: -1;width: 100%;">
+                <a href="#title4"></a>
+            </li>
+        </ul>
+    </aside>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/sticksy.js"></script>
     <script src="js/index.js"></script>
@@ -667,7 +684,7 @@
             bgActive(scrollH);
             dolphin(dolph);
             foot();
-
+            asideActive(scrollH)
         }
     </script>
 </body>
