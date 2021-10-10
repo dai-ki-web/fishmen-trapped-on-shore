@@ -7,14 +7,8 @@ for (var i = 1; i < 5; i++) {
 }
 
 // 对话框
-var wordP1 = []
-for (var i = 0; i < 4; i++) {
-    wordP1.push(document.querySelector(".intro-word1").querySelectorAll("div")[i].querySelector("img"));
-}
-var wordP2 = []
-for (var i = 0; i < 2; i++) {
-    wordP2.push(document.querySelector(".intro-word2").querySelectorAll("div")[i].querySelector("img"));
-}
+var p1 = document.getElementById("p1");
+var p2 = document.getElementById("p2");
 
 // 各部分的高度
 var headerH = document.querySelector("header").clientHeight;
@@ -55,6 +49,23 @@ for (var i = 0; i < 5; i++) {
 }
 
 
+function fadeOut1(obj, cN, num) {
+    var word = [];
+    for (var i = 0; i < num; i++) {
+        word.push(obj.querySelectorAll(".intro-word1")[1].querySelectorAll("div")[i]);
+    }
+    var dis = parseInt((GetRect(obj).bottom - toTop - 700) / 200);
+    word[num - dis - 1].className = "ani-show " + cN;
+}
+
+function fadeOut2(obj, cN, num) {
+    var word = [];
+    for (var i = 0; i < num; i++) {
+        word.push(obj.querySelectorAll(".intro-word2")[1].querySelectorAll("div")[i]);
+    }
+    var dis = parseInt((GetRect(obj).bottom - toTop - 700) / 400);
+    word[num - dis - 1].className = "ani-show " + cN;
+}
 
 function GetRect(element) {
     var rect = element.getBoundingClientRect();
@@ -237,7 +248,17 @@ function foot() {
 
 function playVoice(e) {
     var voice = e.srcElement.querySelector("audio");
-    voice.play();
+    var state = voice.dataset.state;
+    console.log(state);
+    if (state == "true") {
+        voice.pause();
+        voice.dataset.state = "false";
+    }
+    else if (state == "false") {
+        voice.play();
+        voice.dataset.state = "true";
+    }
+
 }
 
 function asideActive(scrollH) {

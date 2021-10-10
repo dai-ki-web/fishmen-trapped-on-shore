@@ -11,25 +11,13 @@
   }
 
 @keyframes appear {
-    0% {
-        visibility: hidden;   
+    0%{
+        opacity: 0;
         transform: scale(0);
     }
-
-    100% {
-        visibility: visible;
+    100%{
+        opacity: 1;
         transform: scale(1);
-    }
-}
-
-@keyframes disappear {
-    0% {
-        visibility: visible;
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0);
     }
 }
 
@@ -76,11 +64,7 @@
 
 
 .ani-show {
-    animation: appear 1s ease forwards;
-}
-
-.ani-dishow {
-    animation: disappear 1s ease forwards;
+    animation: appear .8s ease forwards;
 }
 
 .leftOrigin {
@@ -101,12 +85,12 @@
 
 
 .bigtitle {
-    animation: bgFadeIn  1s forwards;
+    animation: bgFadeIn  .8s forwards;
 }
 
 .dolUp {
     display: block;
-    animation: dolphinUp 2s ease forwards;
+    animation: dolphinUp 1.5s ease forwards;
     transform-origin: bottom;
 }
 
@@ -332,18 +316,6 @@ button[class^="btn"] {
     background-color: #55899e;
 }
 
-div[class^="intro-word"] {
-    position: absolute;
-    top: 700px;
-    padding: 100px 0;
-    z-index: 1;
-}
-
-div[class^="intro-word"] img {
-    display: block;
-    width: 90%;
-}
-
 .end img {
     width: 100%;
 }
@@ -393,17 +365,24 @@ div[class^="intro-word"] img {
     background-position: right;
 }
 
-.intro-word1 div img {
-    float: right;
-    padding: 20px 0 0;
-    visibility: hidden;
+div[class^="intro-word"] {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    width: 100%;
 }
 
-.intro-word2 div img {
-    width: 70%;
-    padding-left: 15%;
-    visibility: hidden;
-} 
+div[class^="intro-word"] div {
+    position: relative;
+    opacity: 0;
+}
+
+div[class^="intro-word"] div img {
+    display: block;
+    width: 90%;
+    padding: 20px 0 0;
+}
 
 .invisible{
     opacity: 0;
@@ -509,7 +488,7 @@ div[class^="intro-word"] img {
 
 .text img {
     display: block;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
 }
 

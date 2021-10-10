@@ -24,36 +24,38 @@
         <section id="intro">
             <div id="person">
                 <!-- 第一个人物 -->
-                <div style="position: relative;margin-bottom: 100px;">
+                <div style="position: relative;margin-bottom: 100px;" id="p1">
                     <div style="height:1500px;position: relative;">
                         <div class="graph-stone"></div>
                         <div class="intro-p1">
+                            <div id="intro-word1" class="intro-word1">
+                                <div><img src="images/dialogue1.png" alt=""></div>
+                                <div><img src="images/dialogue2.png" alt=""></div>
+                                <div><img src="images/dialogue3.png" alt=""></div>
+                                <div><img src="images/dialogue4.png" alt=""></div>
+                            </div>
                         </div>
                     </div>
-                    <div id="intro-word1" class="intro-word1">
-                        <div><img src="images/dialogue1.png" alt=""></div>
-                        <div><img src="images/dialogue2.png" alt=""></div>
-                        <div><img src="images/dialogue3.png" alt=""></div>
-                        <div><img src="images/dialogue4.png" alt=""></div>
-                    </div>
+
 
                 </div>
                 <!-- 第二个人物 -->
-                <div style="position: relative;margin-bottom: 100px;">
+                <div style="position: relative;margin-bottom: 100px;" id="p2">
                     <div style="height:1300px;">
                         <div class="graph-stone"></div>
                         <div class="intro-p2">
+                            <div id="intro-word2" class="intro-word2">
+                                <div><img src="images/dialogue5.png" alt=""></div>
+                                <div><img src="images/dialogue6.png" alt=""></div>
+                            </div>
                         </div>
                     </div>
-                    <div id="intro-word2" class="intro-word2">
-                        <div><img src="images/dialogue5.png" alt=""></div>
-                        <div><img src="images/dialogue6.png" alt=""></div>
-                    </div>
+
                 </div>
             </div>
             <!-- 横幅 -->
             <div style="position: relative;margin-bottom: 100px;padding-top: 100px;">
-                <div style="height:1300px;width: 50%;margin: 0 auto;">
+                <div style="height:800px;width: 50%;margin: 0 auto;">
                     <div id="nav" class="nav" style="height: 700px;">
                         <img src="images/layer3.png" alt="">
                         <img src="images/layer2.png" alt="">
@@ -97,7 +99,7 @@
                     土桥社区东临长江，渔民及渔民家属集中安置于“渔民新村”，具备一定的典型性。且当地政府对“十年禁渔”政策的执行力度较大，各项生活保障工作完成度较高，是一个值得深入关注的渔村。
                 </p>
                 <figure>
-                    <img src="news/上岸后渔民聚集处之一“渔民新村”.png" alt="">
+                    <img src="news/上岸后渔民聚集处之一“渔民新村”.webp" alt="">
                     <figcaption>上岸后渔民聚集处之一“渔民新村”</figcaption>
                 </figure>
 
@@ -205,7 +207,7 @@
                 <p>陈先生的父亲捕鱼时间长，早时办了证，参与过退渔转产的培训，但是他认为政府提供的培训益处不大，更别提再传授技艺给自己的儿子。</p>
                 <p>“学习的东西都没用......养殖......我们现在怎么能养得起来呢？”陈先生的父亲指着自家厨房水槽，“在这里养吗？”</p>
                 <figure>
-                    <img src="news/深度采访陈氏父子二人.png" alt="">
+                    <img src="news/深度采访陈氏父子二人.webp" alt="">
                     <figcaption>深度采访陈氏父子二人</figcaption>
                 </figure>
                 <p>在他们父子二人看来，他们家既没钱，也没地，转产培训时教的养殖业还需要池塘，现在的养殖都是私人承包的，现在也没有国营养殖场雇人，自己做养殖毫无竞争力。
@@ -213,7 +215,7 @@
 
                 <p style="position: relative;">
                     <button class="audio" onclick="playVoice(event)">
-                        <audio src="audio/第一个音频.mp3" id="voice1" controls></audio>
+                        <audio src="audio/第一个音频.mp3" id="voice1" controls data-state="false"></audio>
                     </button>
                     <span><ins>“现在没有收入，对未来也没有打算。打工的话疫情期间也不好找，最要命的是文化程度太低了。”</ins>
                     </span>
@@ -293,7 +295,7 @@
                     。自主创业或灵活就业的退捕渔民大多去往发达地区或者附近城市务工，而分五批进行的公益性岗位安置也解决了相当比例的渔民就业。另外还有少部分退捕渔民选择了与原来生活方式相近的渔民安置产业，继续过上了在船上的生活。退出劳动市场的49名渔民中除去已死亡的4人和失踪多年的1人，剩下的主要可以分为在校生、照顾孩子家庭、身体原因和暂无合适岗位四类。
                 </p>
                 <figure>
-                    <img src="news/公益性岗位之一的护鱼队.png" alt="">
+                    <img src="news/公益性岗位之一的护鱼队.webp" alt="">
                     <figcaption>公益性岗位之一的护鱼队</figcaption>
                 </figure>
 
@@ -319,7 +321,7 @@
                 <p>土桥社区共为137名渔民定制了帮扶计划，帮扶计划的内容主要包<span>政策宣传、就业指导、职业技能培训和职业介绍</span>。土桥社区政府分别在2020年9月4号和9月30号对共91名渔民进行了线下培训班集中政策宣传和就业指导，并紧接着落实了约两周的水产养殖和绿化保洁职业培训。而对于没有职业培训意愿的46名渔民，政府在10月20号进行了上门或电话形式的宣传和指导。同时在6月11号、9月28号和10月20号，当地政府还组织了三次也介绍，有近一半参加帮扶计划的渔民参加。最终137名参加帮扶计划的退捕渔民中有116人就业，<span>就业率达到85%</span>。
                 </p>
                 <figure>
-                    <img src="news/帮联手册记录着帮扶的措施和成效.png" alt="">
+                    <img src="news/帮联手册记录着帮扶的措施和成效.webp" alt="">
                     <figcaption>帮联手册记录着帮扶的措施和成效</figcaption>
                 </figure>
                 <p>工作人员介绍，实际上帮扶计划的实施并不是一件轻松的事，常年打渔的生活习惯让很多渔民开始并不愿意参加工作。上岸前，他们一年中他们只需要劳作三段比较长的时间，就可以获得全年的收入，其他时间游手好闲，吃喝玩乐，所以突然间无法适应正常的上班时间。
@@ -347,7 +349,7 @@
                 <p>老陈有两艘船，由于年事较高，他雇佣了一个人帮他一起捕鱼，老伴在家里带孙女，儿子则在外面打工。2020年他的大船被拆补偿21万，小船补偿四千，渔具补偿五千元。在这之前，他每年收入有七八万、八九万一年，好的话有十来万。
                 </p>
                 <figure>
-                    <img src="news/入户深度采访老陈家.png" alt="">
+                    <img src="news/入户深度采访老陈家.webp" alt="">
                     <figcaption>入户深度采访老陈家</figcaption>
                 </figure>
 
@@ -358,7 +360,7 @@
                 <p>如今，他二十多岁的儿子在外面打工，还没有参上社保。养殖业的培训对他来说并不实用，没有钱和地皮的投资就没有办法实现转业，养老保险业要六十岁才能拿到。</p>
                 <p style="position: relative;">
                     <button class="audio" onclick="playVoice(event)">
-                        <audio src="audio/第二个音频.mp3" id="voice1" controls></audio>
+                        <audio src="audio/第二个音频.mp3" id="voice1" controls data-state="false"></audio>
                     </button>
                     <span><ins>“我和老伴还能吃几个子呢，每个月收入就那看大门的400元，根本不够。”</ins></span>
                 </p>
@@ -429,7 +431,7 @@
                     B级中主要的低保类别是老年人、其它和未成年人，C级中则主要是其它类别。
                 </p>
                 <figure>
-                    <img src="news/帮联手册记录的社会保障等信息.png" alt="">
+                    <img src="news/帮联手册记录的社会保障等信息.webp" alt="">
                     <figcaption>帮联手册记录的社会保障等信息</figcaption>
                 </figure>
 
@@ -530,7 +532,7 @@
                 </p>
                 <p style="position: relative;">
                     <button class="audio" onclick="playVoice(event)">
-                        <audio src="audio/第三段音频.mp3" id="voice1" controls></audio>
+                        <audio src="audio/第三段音频.mp3" id="voice1" controls data-state="false"></audio>
                     </button>
                     “也有遇到过不愿意配合的渔民，能够理解。把他们吃饭的饭碗都给一下子端掉了，心理上肯定有落差。”江主任说，尤其四五十岁以上，无法适应上岸说活的老年人，他们无法重新学一门手艺，但又要养活一个家，
                     <span><ins>“苦就苦他们这一代，他们这一代是真苦。”</ins> </span>。
@@ -539,7 +541,7 @@
                 <p>稍微年轻一点的渔民还可以外出打工，开始新的生活，只有他们以后只能靠低保、临时性岗位的工资和养老保险养活自己了。他们在打鱼的时候就很辛苦，风餐露宿，江水作伴，江主任看着其中一个护鱼队员的背影小声感慨到：“他一把年纪了，儿子之前打鱼时遇到风浪死在了江中，以后只能指望他的小孙子了.....”，说着眼里闪烁起了泪光。
                 </p>
                 <figure>
-                    <img src="news/江主任日常和护鱼队成员交流.png" alt="">
+                    <img src="news/江主任日常和护鱼队成员交流.webp" alt="">
                     <figcaption>江主任日常和护鱼队成员交流</figcaption>
                 </figure>
 
@@ -675,8 +677,14 @@
         window.onscroll = function () {
             var scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
             // console.log(scrollH);
-            fadeOut(wordP1, "leftOrigin");
-            fadeOut(wordP2, "rightOrigin");
+
+            if (GetRect(p1.querySelectorAll(".intro-word1")[1]).top == toTop) {
+                fadeOut1(p1, "leftOrigin", 4);
+            }
+            if (GetRect(p2.querySelectorAll(".intro-word2")[1]).top == toTop) {
+                fadeOut2(p2, "rightOrigin", 2);
+            }
+
             if (GetRect(nav).top == 90) {
                 navFade(nav, scrollH);
             }
