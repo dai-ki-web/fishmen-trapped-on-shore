@@ -292,7 +292,7 @@ button[class^="btn"] {
 .cover {
     background: url("../images/head.jpg");
     background-size: cover;
-    background-position: bottom right;
+    background-position: center right;
     position: relative;
     display: block;  
     width: 100%;
@@ -309,7 +309,7 @@ button[class^="btn"] {
     height: 100%;
     background: url("../images/title.png") no-repeat;
     background-size: cover;
-    background-position: bottom right ;
+    background-position: center right ;
     text-align: center;
 }
 

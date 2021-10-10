@@ -259,21 +259,21 @@ function asideActive(scrollH) {
         side[3].classList.remove("choosed");
     }
 
-    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH) && scrollH <= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
+    if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
         side[0].classList.remove("choosed");
         side[1].classList.remove("choosed");
         side[2].classList.add("choosed");
         side[3].classList.remove("choosed");
     }
 
-    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
+    if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
         side[0].classList.remove("choosed");
         side[1].classList.remove("choosed");
         side[2].classList.remove("choosed");
         side[3].classList.add("choosed");
     }
 
-    if (scrollH > (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
+    if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
         side[0].classList.remove("choosed");
         side[1].classList.remove("choosed");
         side[2].classList.remove("choosed");
