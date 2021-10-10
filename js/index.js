@@ -88,7 +88,7 @@ function bgMove(ele, bg) {
     var tempBox = bg.querySelector("div");
     if (titlepos.top <= 0) {
         tempBox.className = "bgTitleIn";
-        if (titlepos.bottom <= Height && titlepos.bottom > 0) {
+        if (titlepos.bottom <= Height && titlepos.bottom >= 0) {
             // 移动的距离
             // console.log(titlepos.top);
             bg.style.top = (titlepos.bottom - Height) + "px";

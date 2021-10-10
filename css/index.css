@@ -134,15 +134,16 @@ section {
     margin: 0 auto;
 }
 
-img {
-    margin: 0 auto;
-}
-
 footer {
     padding: 50px 0;
     color: black;
     font-size: 12px;
     background-color: #fff;
+}
+
+figcaption {
+    font-size: 12px;
+    text-align: center;
 }
 
 div[class^="bg"] {
