@@ -45,6 +45,7 @@ var ending = document.getElementById("ending");
 var dolph = document.getElementById("dolphin");
 var footer = document.querySelector("footer");
 var side = document.querySelector("aside").querySelectorAll("li");
+var as = document.querySelector("aside");
 
 // 章节背景图
 var ele;
@@ -118,7 +119,7 @@ function checkPage(obj) {
     }
 }
 
-function next() {
+function next(event) {
     var obj = event.srcElement.parentNode.querySelector("iframe");
     var adrr = obj.src.split("#")[0];
     var flag = parseInt(obj.dataset.flag);
@@ -128,7 +129,7 @@ function next() {
     checkPage(obj);
 }
 
-function previous() {
+function previous(event) {
     var obj = event.srcElement.parentNode.querySelector("iframe");
     var adrr = obj.src.split("#")[0];
     var flag = parseInt(obj.dataset.flag);
@@ -141,7 +142,7 @@ function previous() {
 function navFade(nav, scrollH) {
     var obj = nav.querySelectorAll("img");
     var sh = scrollH - headerH - personH;
-    var n = parseInt(sh / 350);
+    var n = parseInt(sh / 200);
     for (var i = 0; i <= n; i++) {
         obj[i].className = "bgTitleIn";
     }
@@ -228,8 +229,9 @@ function bgActive(scrollH) {
 function foot() {
     if (GetRect(footer).top <= Height) {
         var box = document.getElementById("bg5");
-        console.log(footer.top);
+
         box.style.top = (GetRect(footer).top - Height) + "px";
+
     }
 }
 
@@ -250,6 +252,7 @@ function asideActive(scrollH) {
         side[1].classList.remove("choosed");
         side[2].classList.remove("choosed");
         side[3].classList.remove("choosed");
+        as.style.display = "block";
     }
 
     if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH)) {
@@ -257,6 +260,7 @@ function asideActive(scrollH) {
         side[1].classList.add("choosed");
         side[2].classList.remove("choosed");
         side[3].classList.remove("choosed");
+        as.style.display = "block";
     }
 
     if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH)) {
@@ -264,6 +268,7 @@ function asideActive(scrollH) {
         side[1].classList.remove("choosed");
         side[2].classList.add("choosed");
         side[3].classList.remove("choosed");
+        as.style.display = "block";
     }
 
     if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH) && scrollH < (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
@@ -271,6 +276,7 @@ function asideActive(scrollH) {
         side[1].classList.remove("choosed");
         side[2].classList.remove("choosed");
         side[3].classList.add("choosed");
+        as.style.display = "block";
     }
 
     if (scrollH >= (headerH + articleZeroH + hdOneH + articleOneH + hdTwoH + articleTwoH + hdThreeH + articleThreeH + hdFourH + articleFourH)) {
@@ -278,5 +284,6 @@ function asideActive(scrollH) {
         side[1].classList.remove("choosed");
         side[2].classList.remove("choosed");
         side[3].classList.remove("choosed");
+        as.style.display = "none";
     }
 }
