@@ -172,6 +172,10 @@ footer {
     background-color: #fff;
 }
 
+figure {
+    margin: 2em 0;
+}
+
 figcaption {
     font-size: 12px;
     text-align: center;
