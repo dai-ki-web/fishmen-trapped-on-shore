@@ -5,7 +5,7 @@
     <meta charset=" UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon-2.ico">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/base.css">
     <title>江面再无蓑笠翁</title>
@@ -528,8 +528,12 @@
                     “政府出台的配套政策是非常多的，如果有其他困难基本都会帮”，这是江主任为民服务的想法，也是在面对很多困难时的内心信念。
                     <span>政策的推行必定会有一定的阻力，而这些都需要一线的工作人员合理化解。</span>
                 </p>
-                <p>“也有遇到过不愿意配合的渔民，能够理解。把他们吃饭的饭碗都给一下子端掉了，心理上肯定有落差。”江主任说，尤其四五十岁以上，无法适应上岸说活的老年人，他们无法重新学一门手艺，但又要养活一个家，
-                    <span>“苦就苦他们这一代，他们这一代是真苦。”</span>。
+                <p style="position: relative;">
+                    <button class="audio" onclick="playVoice(event)">
+                        <audio src="audio/第三段音频.mp3" id="voice1" controls></audio>
+                    </button>
+                    “也有遇到过不愿意配合的渔民，能够理解。把他们吃饭的饭碗都给一下子端掉了，心理上肯定有落差。”江主任说，尤其四五十岁以上，无法适应上岸说活的老年人，他们无法重新学一门手艺，但又要养活一个家，
+                    <span><ins>“苦就苦他们这一代，他们这一代是真苦。”</ins> </span>。
 
                 </p>
                 <p>稍微年轻一点的渔民还可以外出打工，开始新的生活，只有他们以后只能靠低保、临时性岗位的工资和养老保险养活自己了。他们在打鱼的时候就很辛苦，风餐露宿，江水作伴，江主任看着其中一个护鱼队员的背影小声感慨到：“他一把年纪了，儿子之前打鱼时遇到风浪死在了江中，以后只能指望他的小孙子了.....”，说着眼里闪烁起了泪光。
@@ -661,10 +665,6 @@
             <li><a href="#title2"><img src="images/tag3.PNG" alt=""></a></li>
             <li><a href="#title3"><img src="images/tag1.PNG" alt=""></a></li>
             <li><a href="#title4"><img src="images/tag4.PNG" alt=""></a></li>
-            <li
-                style="position: absolute;left: 0;height: 50px;background-color: #55899e;top: 0;z-index: -1;width: 100%;">
-                <a href="#title4"></a>
-            </li>
         </ul>
     </aside>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -684,7 +684,7 @@
             bgActive(scrollH);
             dolphin(dolph);
             foot();
-            asideActive(scrollH)
+            asideActive(scrollH);
         }
     </script>
 </body>

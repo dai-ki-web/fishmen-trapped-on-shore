@@ -139,6 +139,10 @@ aside ul li {
     background-color: rgba(255,255,255,.5);
 }
 
+aside ul li:hover {
+    background-color: rgba(255,255,255,.7);
+}
+
 aside ul li img {
     height: 100%;
     object-fit: contain;
@@ -288,7 +292,7 @@ button[class^="btn"] {
 .cover {
     background: url("../images/head.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom right;
     position: relative;
     display: block;  
     width: 100%;
@@ -305,7 +309,7 @@ button[class^="btn"] {
     height: 100%;
     background: url("../images/title.png") no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom right ;
     text-align: center;
 }
 
@@ -314,6 +318,7 @@ button[class^="btn"] {
     position: absolute;
     left: 50%;
     bottom: 10%;
+    font-size: 2rem;
     transform: translate(-50%,0);
     font-weight: 400;
     letter-spacing: 30px;
@@ -486,7 +491,7 @@ div[class^="intro-word"] img {
 }
 
 .text h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin: 50px 0 10px;
     padding: 20px 0;
 }
