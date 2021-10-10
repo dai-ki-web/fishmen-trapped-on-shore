@@ -392,11 +392,13 @@ div[class^="intro-word"] img {
 .intro-word1 div img {
     float: right;
     padding: 20px 0 0;
+    visibility: hidden;
 }
 
 .intro-word2 div img {
     width: 70%;
     padding-left: 15%;
+    visibility: hidden;
 } 
 
 .invisible{
