@@ -355,6 +355,7 @@ button[class^="btn"] {
     background:url(../images/intro1.png) no-repeat;
     background-size: contain;
     height: 700px;
+    background-position: center;
 }
 
 .intro-p2 {
@@ -362,15 +363,16 @@ button[class^="btn"] {
     background:url(../images/intro2.png) no-repeat;
     background-size: contain;
     height: 700px;
-    background-position: right;
+    background-position: center right;
 }
 
 div[class^="intro-word"] {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 5%;
     z-index: 1;
     width: 100%;
+    transform: translate(0,-50%);
 }
 
 div[class^="intro-word"] div {

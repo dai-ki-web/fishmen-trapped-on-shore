@@ -79,22 +79,6 @@ function GetRect(element) {
     }
 }
 
-// 控制对话框
-
-function fadeOut(eleArray, cN) {
-    for (var i = 0; i < eleArray.length; i++) {
-        var h = eleArray[i].clientHeight;
-        var boxData = GetRect(eleArray[i]);
-        if (boxData.top <= (Height - h - toTop) * 1) {
-            eleArray[i].className = "ani-show " + cN;
-        }
-        else if (boxData.top > (Height - h - toTop) * 1) {
-            eleArray[i].className = "ani-dishow " + cN;
-        }
-    }
-
-}
-
 // 控制背景
 function bgMove(ele, bg) {
     var titlepos = GetRect(ele);
