@@ -47,7 +47,6 @@
     100% {
         opacity: 1;
         top: 0;
-        /* transform: translate(-50%,-50%); */
     }
 }
 
@@ -167,6 +166,7 @@ figcaption {
 
 div[class^="bg"] {
     position: fixed; 
+    /* display: none; */
     top: 0;
     left: 0;
     width: 100%;
@@ -187,7 +187,6 @@ div[class^="bg"] div {
     position: absolute;
     top: 0;
     left: -12%;
-    /* display: inline-block; */
     width: 10%;
     min-width: 25px;
     height: 60px;
@@ -196,7 +195,7 @@ div[class^="bg"] div {
 }
 
 .bgOne {
-    background: url('../images/part1.png') no-repeat;
+    background: url('../images/part1.webp') no-repeat;
     z-index: -4;
     background-position: center bottom;
 }
@@ -208,7 +207,7 @@ div[class^="bg"] div {
 }
 
 .bgTwo {
-    background: url('../images/part2.png') no-repeat;
+    background: url('../images/part2.webp') no-repeat;
     z-index: -3;
     background-position: center top;
 }
@@ -220,7 +219,7 @@ div[class^="bg"] div {
 }
 
 .bgThree {
-    background: url('../images/part3.png') no-repeat;
+    background: url('../images/part3.webp') no-repeat;
     display: none;
     z-index: -2;
     background-position: center top;
@@ -233,7 +232,7 @@ div[class^="bg"] div {
 }
 
 .bgFour {
-    background: url('../images/part4.png') no-repeat;
+    background: url('../images/part4.webp') no-repeat;
     display: none;
     z-index: -1;
     background-position: center bottom;
@@ -278,7 +277,7 @@ button[class^="btn"] {
 }
 
 .cover {
-    background: url("../images/head.jpg");
+    background: url("../images/head.webp");
     background-size: cover;
     background-position: center right;
     position: relative;
@@ -327,7 +326,7 @@ button[class^="btn"] {
 }
 
 .endBg {
-    background: url('../images/bgend.JPG') no-repeat;
+    background: url('../images/bgend.webp') no-repeat;
     display: none;
     z-index: -1;
     position: fixed; 
@@ -352,7 +351,7 @@ button[class^="btn"] {
 
 .intro-p1 {
     position: relative;
-    background:url(../images/intro1.png) no-repeat;
+    background:url(../images/intro1.webp) no-repeat;
     background-size: contain;
     height: 700px;
     background-position: center;
@@ -360,7 +359,7 @@ button[class^="btn"] {
 
 .intro-p2 {
     position: relative;
-    background:url(../images/intro2.png) no-repeat;
+    background:url(../images/intro2.webp) no-repeat;
     background-size: contain;
     height: 700px;
     background-position: center right;
