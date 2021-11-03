@@ -105,36 +105,62 @@ audio {
 }
 
 aside {
+  display: none;
     position: fixed;
     top: 50%;
     left: 0;
     transform: translate(0,-50%);
 }
 
-aside ul {
+aside>ul {
     position: relative;
 }
 
-aside ul li {
-    display: block;
+.nav{
+  position: absolute;
+}
+
+.nav ul li {
+  display: block;
     padding: 10px;
     height: 50px;
     background-color: rgba(255,255,255,.5);
 }
 
-aside ul li:hover {
+.nav ul li:first-child{
+  border-radius: 10px 10px 0 0;
+}
+
+.nav ul li:last-child{
+  border-radius: 0 0 10px 10px;
+}
+
+.nav ul li:hover {
     background-color: rgba(255,255,255,.7);
 }
 
-aside ul li img {
+.nav img {
     height: 100%;
     object-fit: contain;
 }
 
+aside>ul .slider {
+  padding-top: 0;
+  transition: all .5s ease-in-out;
+}
+
+.slider div{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #002e4e;
+  border-radius: 10px;
+}
+
 header {
-    /* position: relative; */
     display: block;
     width: 100%;
+    height: calc(100vh + 200px) ;
     overflow: hidden;
     background: #2d5d72;
 }
@@ -166,7 +192,6 @@ figcaption {
 
 div[class^="bg"] {
     position: fixed; 
-    /* display: none; */
     top: 0;
     left: 0;
     width: 100%;
@@ -190,7 +215,7 @@ div[class^="bg"] div {
     width: 10%;
     min-width: 25px;
     height: 60px;
-    background: transparent url("../images/audio.png") no-repeat;
+    background: transparent url("../images/audio.webp") no-repeat;
     background-size: contain;
 }
 
@@ -202,7 +227,7 @@ div[class^="bg"] div {
 
 .bgOne div {
     opacity: 0;
-    background: url('../images/part1-title.png') no-repeat;
+    background: url('../images/part1-title.webp') no-repeat;
     background-position: center bottom;
 }
 
@@ -213,7 +238,7 @@ div[class^="bg"] div {
 }
 
 .bgTwo div {
-    background: url('../images/part2-title.png') no-repeat;
+    background: url('../images/part2-title.webp') no-repeat;
     opacity: 0;
     background-position: center top;
 }
@@ -226,7 +251,7 @@ div[class^="bg"] div {
 }
 
 .bgThree div {
-    background: url('../images/part3-title.png') no-repeat;
+    background: url('../images/part3-title.webp') no-repeat;
     opacity: 0;
     background-position: center top;
 }
@@ -239,7 +264,7 @@ div[class^="bg"] div {
 }
 
 .bgFour div {
-    background: url('../images/part4-title.png') no-repeat;
+    background: url('../images/part4-title.webp') no-repeat;
     opacity: 0;
     background-position: center bottom;
 }
@@ -294,7 +319,7 @@ button[class^="btn"] {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/title.png") no-repeat;
+    background: url("../images/title.webp") no-repeat;
     background-size: cover;
     background-position: center right ;
     text-align: center;
@@ -417,11 +442,11 @@ div[class^="intro-word"] div img {
     text-align: center;
 }
 
-.nav {
+.banner {
     position: relative;
 }
 
-.nav img {
+.banner img {
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -429,7 +454,7 @@ div[class^="intro-word"] div img {
     left: 0;
 }
 
-.nav img:first-of-type {
+.banner img:first-of-type {
     position: static;
 }
 
@@ -466,7 +491,7 @@ div[class^="intro-word"] div img {
 }
 
 .title {
-    /* height: 100%; */
+    height: calc(100vh + 100px) ;
     background-color: transparent;
     text-align: center;
 }
@@ -570,5 +595,61 @@ div[class^="intro-word"] div img {
     content: "51.7%";
 }
 
+@media screen and (max-width:1024px) {
+    .text {
+        margin: 10px auto 20px;
+        width: 80%;
+    }
 
+    .text h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .text {
+        margin: 10px auto 20px;
+        width: 100%;
+    }
+
+    .nav ul li {
+        height: 30px;
+    }
+    
+    .slider div{
+      width: 30px;
+      height: 30px;
+    }
+
+    .text h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:520px) {
+  .text {
+      margin: 10px auto 20px;
+      /* width: 100%; */
+  }
+
+  .nav ul li {
+      height: 20px;
+  }
+  
+  .nav ul li:first-child{
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .nav ul li:last-child{
+    border-radius: 0 0 5px 5px;
+  }
+  
+  
+  .slider div{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+}
 
