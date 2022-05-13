@@ -621,7 +621,7 @@
       <p>
         小组成员分工：<br>
         统筹：周奥成<br>
-        数据处理与可视化：王权、周奥成<br>
+        数据处理与可视化：王权、周奥成、徐昳清<br>
         采访整理与文案撰写：徐昳清<br>
         视觉设计：葛沛源<br>
         网页制作：吴艳凤<br>
@@ -681,25 +681,25 @@
   <script>
 
     window.onscroll = function () {
-      var scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       // console.log(scrollH);
 
       if (GetRect(p1.querySelectorAll(".intro-p1")[1]).top == toTop) {
-        fadeOut1(p1, "leftOrigin", 4);
+        fadeOut1(p1, "leftOrigin", 4)
       }
       if (GetRect(p2.querySelectorAll(".intro-p2")[1]).top == toTop) {
-        fadeOut2(p2, "rightOrigin", 2);
+        fadeOut2(p2, "rightOrigin", 2)
       }
 
       if (GetRect(banner).top == 90) {
-        bannerFade(banner, scrollH);
+        bannerFade(banner, scrollH)
       }
-      showTitle(scrollH);
-      slide(scrollH);
-      bgActive(scrollH);
-      dolphin(dolph);
-      foot();
-      asideActive(scrollH);
+      showTitle(scrollH)
+      slide(scrollH)
+      bgActive(scrollH)
+      dolphin(dolph)
+      foot()
+      asideActive(scrollH)
     }
   </script>
 </body>
